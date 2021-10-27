@@ -40,4 +40,4 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # TODO: Add names and emails here
+Josh Wassum was21005@byui.edu
