@@ -23,6 +23,14 @@ class Score(Actor):
 
     # Vanessa
     def add_points(self, points):
-        # self._points += points
-        # reset self.set_text(as shown in requirements)
+
+        """Adds the given points to the running total and updates the text.
+        
+        Args:
+            self (Score): An instance of Score.
+            points (integer): The points to add.
+        """
+        self._points += points
+        self.set_text(f"Score: {self._points}")
+
         pass
