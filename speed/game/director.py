@@ -62,4 +62,11 @@ class Director:
             # set points equal to words.word_check(new_word)
             # _score.add_points(points)
             # _buffer.reset()
+        word = self.buffer.get_word()
+        if '*' in word:
+            new_word = word - '*'
+            points = self.words.word_check(new_word)
+            self._score.add_points(points)
+            self._buffer.reset()
+
         pass
