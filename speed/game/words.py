@@ -63,7 +63,6 @@ class Words(Actor):
             position (Point): The word's position.
             velocity (Point): The word's velocity.
         """
-
         word = Actor()
         word.set_text(text)
         word.set_position(position)
