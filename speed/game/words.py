@@ -22,10 +22,17 @@ class Words(Actor):
         # call _prepare_list()
         pass
 
-    # Brian
+    
     def get_all(self):
-        # return all words
-        pass
+        """Gets all the words from the list of words the player can try to type. 
+        
+        Args:
+            self (words): instances of words
+        returns:
+            list of words to be typed
+        """
+        return self._words
+        
 
     # Shane
     def move_word(self, word, x, y):
@@ -46,14 +53,22 @@ class Words(Actor):
         # return 0
         pass
 
-    # Brian
     def _add_word(self, text, position, velocity):
-        # word set it equal to Actor()
-        # set the test of our word equal to text
-        # set the position of our word to position
-        # set the velocity of our word to velocity
-        # append word to words
-        pass
+        """
+        Adds a new word to the words list using the passed in text, position and velocity.
+
+        Args:
+            self (Words): an instance of words
+            text (string) the words text.
+            position (Point): The word's position.
+            velocity (Point): The word's velocity.
+        """
+        word = Actor()
+        word.set_text(text)
+        word.set_position(position)
+        word.set_velocity(velocity)
+        self._words.append(word)
+        
 
     # Larry
     def _prepare_list(self):
