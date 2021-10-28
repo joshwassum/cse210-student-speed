@@ -41,3 +41,4 @@ root                    (project root folder)
 ## Authors
 ---
 Josh Wassum was21005@byui.edu
+Brian Bawden brianbawden001@gmail.com
