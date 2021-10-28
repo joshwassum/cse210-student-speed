@@ -1,5 +1,5 @@
 import os
-
+"""Values we need for the game that wont change"""
 MAX_X = 60
 MAX_Y = 20
 FRAME_LENGTH = 0.08

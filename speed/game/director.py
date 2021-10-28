@@ -56,17 +56,19 @@ class Director:
 
     # Vanessa
     def _handle_enter(self):
-        # word set it equal to buffer.get_word
-        # if * in word
-            # new_word set it equal to word with the * removed
-            # set points equal to words.word_check(new_word)
-            # _score.add_points(points)
-            # _buffer.reset()
+        """what gets handled when the enter is pressed the word gets the star removed and the points get added. then it resets.
+
+        Stereotype:
+        replaces star on word and adds points and resets buffer.
+
+        Attributes: 
+         self (director): An instance of actor.
+         """
         word = self.buffer.get_word()
         if '*' in word:
-            new_word = word - '*'
+            new_word = word[:-1]
             points = self.words.word_check(new_word)
             self._score.add_points(points)
             self._buffer.reset()
 
-        pass
+        

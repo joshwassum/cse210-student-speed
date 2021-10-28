@@ -17,10 +17,16 @@ class Words(Actor):
     """
     # Vanessa
     def __init__(self):
-        # call the superclass()
-        # set all attributes
-        # call _prepare_list()
-        pass
+         """The class constructor.
+        
+        Args:
+            self (words): An instance of words.
+        """
+         super().__init__()
+         self._words = words
+         self._points = points
+         self._prepare_list()
+        
 
     
     def get_all(self):

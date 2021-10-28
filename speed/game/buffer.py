@@ -22,18 +22,16 @@ class Buffer(Actor):
 
     # Vanessa
     def add_letter(self, letter):
-        # set word equal to word + letter
-        # reset self.set_text(as demonstarted in requirements)
         """Adds the given letter to the word and sets the buffer text with the word and letter.
         
         Args:
             self (set_text): An instance of word.
             letter (letter): An instance of letter
         """
-        word = word + letter
+        word = self._word + letter
         self.set_text(f"Buffer: {word}")
 
-        pass
+        
 
     # Shane
     def get_word(self):
