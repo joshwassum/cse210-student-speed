@@ -47,12 +47,22 @@ class Director:
 
     # Brian
     def _do_outputs(self):
+        """Outputs the important game information during game play. This means it shows clears the screen draws the score, words and buffer. It also clears the buffer
+        
+        Args:
+            self (Director): An instance of Director
+        """
         # _output_service.clear_screen()
+        self._output_service.clear_screen()
         # draw the buffer actor
+        self._output_service.draw_actor(self._buffer)
         # draw all words actors
+        self._output_service.draw_actor(self._word)
         # draw score actor
+        self._output_service.draw_actor(self._score)
         # output_service.flush_buffer()
-        pass
+        self._output_service.flush_buffer()
+        
 
     # Vanessa
     def _handle_enter(self):
