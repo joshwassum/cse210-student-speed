@@ -21,20 +21,45 @@ class Director:
         _Word (Words): an instance of Words.
     '''
 
+    # Shane
     def __init__(self, input_service, output_service):
+        # Needs to include all class attributes
         pass
 
+    # Josh
     def start_game(self):
+        # while loop that calls get_inputs, do_updates, and do_outputs
         pass
 
+    # Larry
     def _get_input(self):
+        # set key equal to input_service.get_letter()
+        # pass key to add_letter in buffer
+
+        # loop through each word in words
+            # set words.move_word(random direction)
         pass
 
+    # Shane
     def _do_updates(self):
+        # call handle_enter
         pass
 
+    # Brian
     def _do_outputs(self):
+        # _output_service.clear_screen()
+        # draw the buffer actor
+        # draw all words actors
+        # draw score actor
+        # output_service.flush_buffer()
         pass
 
+    # Vanessa
     def _handle_enter(self):
+        # word set it equal to buffer.get_word
+        # if * in word
+            # new_word set it equal to word with the * removed
+            # set points equal to words.word_check(new_word)
+            # _score.add_points(points)
+            # _buffer.reset()
         pass
