@@ -24,6 +24,9 @@ class Buffer(Actor):
     def add_letter(self, letter):
         # set word equal to word + letter
         # reset self.set_text(as demonstarted in requirements)
+        word = word + letter
+        self.set_text('--Buffer:' )
+
         pass
 
     # Shane
