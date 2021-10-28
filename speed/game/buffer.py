@@ -14,10 +14,15 @@ class Buffer(Actor):
     # Brian
     def __init__(self):
         # you need to call the superclass init function
+        super().__init__()
         # add all attributes
+        self._text()
         # set the position equal to 1, MAX_Y using the Point class
+        position = Point(1, MAX_Y)
         # self.set_postion(postion)
+        self.set_position(position)
         # self.set_text(as demonstarted in requirements)
+        self.set_text("- Buffer: " + )
         pass
 
     # Vanessa
