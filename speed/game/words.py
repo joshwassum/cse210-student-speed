@@ -50,14 +50,22 @@ class Words(Actor):
 
     # Larry
     def word_check(self, word):
-        # loop through the range of words
-            # set text equal to self._words at current index
-            # if text.get_text() is equal to word
-                # call the set points function and pass the current word
-                # set the current word to a new random word
-                # return points
-        # return 0
-        pass
+        '''Checks the users typed input with the word list. Gets 
+
+        Args:
+            self (words): an instance of Words.
+            text (string) the words text.
+
+        '''
+        for i in range(self._words):
+            text = self._words[i]
+            if text.get_text() == word:
+                self._set_points(word)
+                self._words[i] = random.choice(constants.LIBRARY)
+                return self._points
+            else:
+                return 0
+
 
     def _add_word(self, text, position, velocity):
         """
@@ -78,14 +86,18 @@ class Words(Actor):
 
     # Larry
     def _prepare_list(self):
-        # for range of the constant STARTING_WORDS
-            # set x equal to half of the constant MAX X
-            # set y equal to half of the constant MAX Y
-            # set text equal to a random word from constant LIBRARY
-            # set position equal to x, y - current index using the Point class
-            # set velocity equal to 1,0 using Point class
-            # call the add_word function and pass, text, position, velocity
-        pass
+        """Prepares the word list by adding words from the library constant words.txt.
+        
+        Args:
+            self (Words): an instance of Words.
+        """
+        x = int(constants.MAX_X / 2)
+        y = int(constants.MAX_Y / 2)
+        for n in range(random.choice(constants.LIBRARY)):
+            text = n
+            position = Point(x - n, y)
+            velocity = Point(1, 0)
+            self._add_segment(text, position, velocity)
 
     # Josh
     def _set_points(self, word):
