@@ -56,15 +56,16 @@ class Words(Actor):
             self (words): an instance of Words.
             text (string) the words text.
 
-        '''
-        for i in range(self._words):
+        '''        
+        for i in range(0, len(self._words)):
             text = self._words[i]
+
             if text.get_text() == word:
                 self._set_points(word)
                 self._words[i] = random.choice(constants.LIBRARY)
                 return self._points
-            else:
-                return 0
+            
+        return 0
 
 
     def _add_word(self, text, position, velocity):
