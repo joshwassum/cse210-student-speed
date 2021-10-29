@@ -42,8 +42,8 @@ class Director:
         key = self._input_service.get_letter()
         self.buffer.add_letter(key)
 
-        for word in self._words:
-            self.words.move_word()
+        for i in range(0, len(self._words.get_all())):
+            self.words.move_word(i, self.point.get_x(), self.point.get_y())
 
     # Shane
     def _do_updates(self):
