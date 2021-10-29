@@ -85,7 +85,7 @@ class Words(Actor):
         """
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y / 2)
-        for n in range(random.choice(constants.SNAKE_LENGTH)):
+        for n in range(random.choice(constants.LIBRARY)):
             text = n
             position = Point(x - n, y)
             velocity = Point(1, 0)
