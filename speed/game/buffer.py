@@ -40,8 +40,8 @@ class Buffer(Actor):
 
     # Shane
     def get_word(self):
-        # return the word
-        pass
+        
+        return 
 
     # Josh
     def reset(self):
