@@ -78,14 +78,18 @@ class Words(Actor):
 
     # Larry
     def _prepare_list(self):
-        # for range of the constant STARTING_WORDS
-            # set x equal to half of the constant MAX X
-            # set y equal to half of the constant MAX Y
-            # set text equal to a random word from constant LIBRARY
-            # set position equal to x, y - current index using the Point class
-            # set velocity equal to 1,0 using Point class
-            # call the add_word function and pass, text, position, velocity
-        pass
+        """Prepares the word list by adding words from the library constant words.txt.
+        
+        Args:
+            self (Words): an instance of Words.
+        """
+        x = int(constants.MAX_X / 2)
+        y = int(constants.MAX_Y / 2)
+        for n in range(random.choice(constants.SNAKE_LENGTH)):
+            text = n
+            position = Point(x - n, y)
+            velocity = Point(1, 0)
+            self._add_segment(text, position, velocity)
 
     # Josh
     def _set_points(self, word):
