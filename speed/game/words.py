@@ -50,14 +50,16 @@ class Words(Actor):
 
     # Larry
     def word_check(self, word):
-        # loop through the range of words
-            # set text equal to self._words at current index
-            # if text.get_text() is equal to word
-                # call the set points function and pass the current word
-                # set the current word to a new random word
-                # return points
-        # return 0
-        pass
+        
+        for i in range(self._words):
+            text = self._words[i]
+            if text.get_text() == word:
+                self._set_points(word)
+                self._words[i] = random.choice(constants.LIBRARY)
+                return self._points
+            else:
+                return 0
+
 
     def _add_word(self, text, position, velocity):
         """
