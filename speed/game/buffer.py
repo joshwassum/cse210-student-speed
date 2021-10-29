@@ -20,7 +20,7 @@ class Buffer(Actor):
         # add all attributes
         self._word = " "
         # set the position equal to 1, MAX_Y using the Point class
-        position = Point(1, MAX_Y)
+        position = Point(1, constants.MAX_Y)
         # self.set_postion(postion)
         self.set_position(position)
         # self.set_text(as demonstarted in requirements)
