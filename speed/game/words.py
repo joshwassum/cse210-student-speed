@@ -23,7 +23,7 @@ class Words(Actor):
             self (words): An instance of words.
         """
          super().__init__()
-         self._words = 0
+         self._words = []
          self._points = 0
          self._prepare_list()
         
