@@ -50,7 +50,13 @@ class Words(Actor):
 
     # Larry
     def word_check(self, word):
-        
+        '''Checks the users typed input with the word list. Gets 
+
+        Args:
+            self (words): an instance of Words.
+            text (string) the words text.
+
+        '''
         for i in range(self._words):
             text = self._words[i]
             if text.get_text() == word:
