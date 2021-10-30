@@ -28,7 +28,7 @@ class Director:
         self._keep_playing = True
         self._output_service = output_service
         self._score = Score()
-        self._Word = Words()
+        self._words = Words()
 
     # Josh
     def start_game(self):
@@ -44,7 +44,7 @@ class Director:
             sleep(constants.FRAME_LENGTH)
 
     # Larry
-    def _get_input(self):
+    def _get_inputs(self):
         """Gets the inputs at the beginning of each round of play. In this case,
         that means getting the key and pasing it to the buffer.
 
@@ -52,7 +52,7 @@ class Director:
             self (Director): An instance of Director.
         """
         key = self._input_service.get_letter()
-        self.buffer.add_letter(key)
+        self._buffer.add_letter(key)
 
         for i in range(0, len(self._words.get_all())):
             self._words.move_word(i, 1, random.randint(0,2))
@@ -73,7 +73,7 @@ class Director:
         # draw the buffer actor
         self._output_service.draw_actor(self._buffer)
         # draw all words actors
-        self._output_service.draw_actor(self._words.get_all())
+        self._output_service.draw_actors(self._words.get_all())
         # draw score actor
         self._output_service.draw_actor(self._score)
         # output_service.flush_buffer()
@@ -90,10 +90,10 @@ class Director:
         Attributes: 
          self (director): An instance of actor.
          """
-        word = self.buffer.get_word()
+        word = self._buffer.get_word()
         if '*' in word:
             new_word = word[:-1]
-            points = self.words.word_check(new_word)
+            points = self._words.word_check(new_word)
             self._score.add_points(points)
             self._buffer.reset()
 

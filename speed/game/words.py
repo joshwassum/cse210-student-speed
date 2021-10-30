@@ -42,15 +42,14 @@ class Words(Actor):
 
     # Shane
     def move_word(self, word, x, y):
-        position = Point(x, y)
+        direction = Point(x, y)
         # direction equal to x,y using the Point class
         word = self._words[word]
         # word = self._words[word]
-        word.set_velocity = direction
+        word.set_velocity(direction)
         # word.set_velocity equal to direction
         word.move_next()
         # word.move_next()
-        pass
 
     # Larry
     def word_check(self, word):
@@ -66,7 +65,7 @@ class Words(Actor):
 
             if text.get_text() == word:
                 self._set_points(word)
-                self._words[i] = random.choice(constants.LIBRARY)
+                self._words[i].set_text(constants.LIBRARY[random.randint(0, len(constants.LIBRARY))])
                 return self._points
             
         return 0
@@ -96,13 +95,14 @@ class Words(Actor):
         Args:
             self (Words): an instance of Words.
         """
-        x = int(constants.MAX_X / 2)
-        y = int(constants.MAX_Y / 2)
-        for n in range(random.choice(constants.LIBRARY)):
-            text = n
-            position = Point(x - n, y)
+        for i in range(constants.STARTING_WORDS):
+            x = int(constants.MAX_X / 2)
+            y = int(constants.MAX_Y / 2 - 2)
+            text = constants.LIBRARY[random.randint(0, len(constants.LIBRARY))]
+            position = Point(x, y - i)
             velocity = Point(1, 0)
-            self._add_segment(text, position, velocity)
+
+            self._add_word(text, position, velocity)
 
     # Josh
     def _set_points(self, word):
