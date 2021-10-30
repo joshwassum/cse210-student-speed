@@ -14,16 +14,15 @@ class Buffer(Actor):
     # Brian
     def __init__(self):
         """The class constructor for buffer. Using the superclass constructor, initializes word set to blank, the position and updates the text
+
+        Args:
+            self is an instance of Buffer
         """
 
         super().__init__()
-        # add all attributes
         self._word = ""
-        # set the position equal to 1, MAX_Y using the Point class
         position = Point(1, constants.MAX_Y)
-        # self.set_postion(postion)
         self.set_position(position)
-        # self.set_text(as demonstarted in requirements)
         self.set_text(f"Buffer: {self._word}")
 
     
