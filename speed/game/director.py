@@ -59,7 +59,10 @@ class Director:
         self._buffer.add_letter(key)
 
         for i in range(0, len(self._words.get_all())):
-            self._words.move_word(i, 1, random.randint(0,2))
+            if i % 2 == 0:
+                self._words.move_word(i, random.randint(0,2), random.randint(0,2))
+            else:
+                self._words.move_word(i, -random.randint(0,2), -random.randint(0,2))
 
     # Shane
     def _do_updates(self):
