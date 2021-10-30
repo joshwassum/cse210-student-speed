@@ -18,7 +18,7 @@ class Buffer(Actor):
 
         super().__init__()
         # add all attributes
-        self._word = " "
+        self._word = ""
         # set the position equal to 1, MAX_Y using the Point class
         position = Point(1, constants.MAX_Y)
         # self.set_postion(postion)
@@ -34,15 +34,15 @@ class Buffer(Actor):
             self (set_text): An instance of word.
             letter (letter): An instance of letter
         """
-        word = self._word + letter
-        self.set_text(f"Buffer: {word}")
+        self._word += letter
+        self.set_text(f"Buffer: {self._word}")
 
         
 
     # Shane
     def get_word(self):
         
-        return 
+        return self._word
 
     # Josh
     def reset(self):
