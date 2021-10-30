@@ -43,7 +43,7 @@ class Director:
         self.buffer.add_letter(key)
 
         for i in range(0, len(self._words.get_all())):
-            self.words.move_word(i, self.point.get_x(), self.point.get_y())
+            self._words.move_word(i, 1, random.randint(0,2))
 
     # Shane
     def _do_updates(self):
