@@ -44,4 +44,4 @@ Josh Wassum was21005@byui.edu
 Brian Bawden brianbawden001@gmail.com
 Vanessa Buzzell buz20001@byui.edu
 Shane Wocicki woc13001@byui.edu
-
+Larry Copeland cop21004@byui.edu

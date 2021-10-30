@@ -37,12 +37,17 @@ class Director:
 
     # Larry
     def _get_input(self):
-        # set key equal to input_service.get_letter()
-        # pass key to add_letter in buffer
+        """Gets the inputs at the beginning of each round of play. In this case,
+        that means getting the key and pasing it to the buffer.
 
-        # loop through each word in words
-            # set words.move_word(random direction)
-        pass
+        Args:
+            self (Director): An instance of Director.
+        """
+        key = self._input_service.get_letter()
+        self.buffer.add_letter(key)
+
+        for i in range(0, len(self._words.get_all())):
+            self.words.move_word(i, self.point.get_x(), self.point.get_y())
 
     # Shane
     def _do_updates(self):
@@ -60,7 +65,7 @@ class Director:
         # draw the buffer actor
         self._output_service.draw_actor(self._buffer)
         # draw all words actors
-        self._output_service.draw_actor(self._word)
+        self._output_service.draw_actor(self._words.get_all())
         # draw score actor
         self._output_service.draw_actor(self._score)
         # output_service.flush_buffer()
