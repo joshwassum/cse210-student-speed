@@ -22,9 +22,13 @@ class Director:
     '''
 
     # Shane
-    def __init__(self, input_service, output_service):
-        # Needs to include all class attributes
-        pass
+    def __init__(self, input_service, output_service):    
+        self._buffer = Buffer()
+        self._input_service = input_service
+        self._keep_playing = True
+        self._output_service = output_service
+        self._score = Score()
+        self._Word = Words()
 
     # Josh
     def start_game(self):
@@ -47,9 +51,8 @@ class Director:
 
     # Shane
     def _do_updates(self):
-        # call handle_enter
-        pass
-
+        self._handle_enter()
+    
     # Brian
     def _do_outputs(self):
         """Outputs the important game information during game play. This means it shows clears the screen draws the score, words and buffer. It also clears the buffer

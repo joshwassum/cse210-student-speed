@@ -42,9 +42,13 @@ class Words(Actor):
 
     # Shane
     def move_word(self, word, x, y):
+        position = Point(x, y)
         # direction equal to x,y using the Point class
+        word = self._words[word]
         # word = self._words[word]
+        word.set_velocity = direction
         # word.set_velocity equal to direction
+        word.move_next()
         # word.move_next()
         pass
 
