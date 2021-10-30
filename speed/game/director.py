@@ -22,7 +22,11 @@ class Director:
     '''
 
     # Shane
-    def __init__(self, input_service, output_service):    
+    def __init__(self, input_service, output_service):  
+        """The Class Constructor
+        
+        Args:
+            self (Director): an instance of Director."""  
         self._buffer = Buffer()
         self._input_service = input_service
         self._keep_playing = True
@@ -59,6 +63,11 @@ class Director:
 
     # Shane
     def _do_updates(self):
+        """Updates the game acccording to the game flow completed by the player
+        
+        Args:
+            self (Director): An instance of Director
+        """
         self._handle_enter()
     
     # Brian
