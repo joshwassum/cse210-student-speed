@@ -32,8 +32,16 @@ class Director:
 
     # Josh
     def start_game(self):
-        # while loop that calls get_inputs, do_updates, and do_outputs
-        pass
+        """Starts the game loop to control the sequence of play.
+        
+        Args:
+            self (Director): an instance of Director.
+        """
+        while self._keep_playing:
+            self._get_inputs()
+            self._do_updates()
+            self._do_outputs()
+            sleep(constants.FRAME_LENGTH)
 
     # Larry
     def _get_input(self):
