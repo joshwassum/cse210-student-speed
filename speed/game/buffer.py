@@ -28,10 +28,10 @@ class Buffer(Actor):
 
     # Vanessa
     def add_letter(self, letter):
-        """Adds the given letter to the word and sets the buffer text with the word and letter.
+        """Adds the given letter to the buffer and sets the buffer text with the word and letter.
         
         Args:
-            self (set_text): An instance of word.
+            self (set_text): An instance of buffer.
             letter (letter): An instance of letter
         """
         word = self._word + letter
