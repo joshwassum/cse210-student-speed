@@ -106,5 +106,10 @@ class Words(Actor):
 
     # Josh
     def _set_points(self, word):
-        # set _points equal to the length of word
-        pass
+        """Sets _points equal to the length of word.
+
+        Args:
+            self (Words): an instance of Words.
+            word (string): the word to check the length of.
+        """
+        self._points = len(word)

@@ -46,5 +46,9 @@ class Buffer(Actor):
 
     # Josh
     def reset(self):
-        # set word equal to an empty string
-        pass
+        """Resets the word to an empty string when called.
+        
+        Args:
+            self (Buffer): An instance of Buffer.
+        """
+        self._word = ""
