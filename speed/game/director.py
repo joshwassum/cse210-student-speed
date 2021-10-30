@@ -68,15 +68,10 @@ class Director:
         Args:
             self (Director): An instance of Director
         """
-        # _output_service.clear_screen()
         self._output_service.clear_screen()
-        # draw the buffer actor
         self._output_service.draw_actor(self._buffer)
-        # draw all words actors
         self._output_service.draw_actors(self._words.get_all())
-        # draw score actor
         self._output_service.draw_actor(self._score)
-        # output_service.flush_buffer()
         self._output_service.flush_buffer()
         
 
