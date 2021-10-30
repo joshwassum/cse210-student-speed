@@ -80,7 +80,7 @@ class Director:
         self._output_service.flush_buffer()
         
 
-    # Vanessa
+    
     def _handle_enter(self):
         """what gets handled when the enter is pressed the word gets the star removed and the points get added. then it resets.
 

@@ -26,7 +26,7 @@ class Buffer(Actor):
         # self.set_text(as demonstarted in requirements)
         self.set_text(f"Buffer: {self._word}")
 
-    # Vanessa
+    
     def add_letter(self, letter):
         """Adds the given letter to the word and sets the buffer text with the word and letter.
         
