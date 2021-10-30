@@ -88,7 +88,7 @@ class Director:
         replaces star on word and adds points and resets buffer.
 
         Attributes: 
-         self (director): An instance of actor.
+         self (Director): An instance of Director.
          """
         word = self._buffer.get_word()
         if '*' in word:

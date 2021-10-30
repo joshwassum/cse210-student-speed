@@ -20,7 +20,7 @@ class Words(Actor):
          """The class constructor.
         
         Args:
-            self (words): An instance of words.
+            self (Words): An instance of Words.
         """
          super().__init__()
          self._words = []
