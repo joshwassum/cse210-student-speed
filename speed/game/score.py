@@ -25,7 +25,7 @@ class Score(Actor):
         self.set_position(position)
         self.set_text(f"Score: {self._points}")
 
-    # Vanessa
+    
     def add_points(self, points):
 
         """Adds the given points to the running total and updates the text.

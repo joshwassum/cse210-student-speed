@@ -15,7 +15,7 @@ class Words(Actor):
         _words (list): a list to contain all of our instances of word actors.
         _points (int): keeping track of points in a given word.
     """
-    # Vanessa
+    
     def __init__(self):
          """The class constructor.
         
