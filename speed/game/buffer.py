@@ -40,6 +40,10 @@ class Buffer(Actor):
 
     # Shane
     def get_word(self):
+        """Gets the word(s)
+        
+        Args:
+            self (Buffer): An instance of Buffer."""
         
         return self._word
 
